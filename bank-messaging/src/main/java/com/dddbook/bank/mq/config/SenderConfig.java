@@ -1,6 +1,6 @@
 package com.dddbook.bank.mq.config;
 
-import com.dddbook.bank.mq.impl.Sender;
+import com.dddbook.bank.mq.impl.AuditMessageProducerImpl;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.StringSerializer;
 import org.springframework.beans.factory.annotation.Value;
@@ -50,7 +50,7 @@ public class SenderConfig {
     }
 
     @Bean
-    public Sender sender() {
-        return new Sender();
+    public AuditMessageProducerImpl sender() {
+        return new AuditMessageProducerImpl();
     }
 }

@@ -8,9 +8,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
 
 @Slf4j
-public class Sender implements AuditMessageProducer {
+/**
+ * kafka消息实现
+ */
+public class AuditMessageProducerImpl implements AuditMessageProducer {
 
-    private static final String TOPIC_AUDIT_LOG = "qevents";
+    private static final String TOPIC_AUDIT_LOG = "TOPIC_AUDIT_LOG";
 
     @Autowired
     private KafkaTemplate<String, String> kafkaTemplate;
